@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    if(document.selectBox.slBoxCurrency.selectedIndex == 0 &&  document.frmCurrencyC.radioUSD.checked)
+    {
+        window.alert("Sorry cant do USD to USD convertion! Please select another value.");
+    }
+    else if(document.selectBox.slBoxCurrency.selectedIndex == 0 &&  document.frmCurrencyC.radioGBP.checked)
+    {
+        inputBox = parseFloat(document.frmCurrencyC.textInputNum.value);
+        outPutBox = inputBox * RATE_GBP;
+        document.frmCurrencyC.textOutPutTotal.value = outPutBox;
+    }
+    else if(document.selectBox.slBoxCurrency.selectedIndex == 0 &&  document.frmCurrencyC.radioEURO.checked)
+    {
+        inputBox = parseFloat(document.frmCurrencyC.textInputNum.value);
+        outPutBox = inputBox * RATE_EURO;
+        document.frmCurrencyC.textOutPutTotal.value = outPutBox;
+    }
+    else if(document.selectBox.slBoxCurrency.selectedIndex == 0 &&  document.frmCurrencyC.radioAUD.checked)
+    {
+        inputBox = parseFloat(document.frmCurrencyC.textInputNum.value);
+        outPutBox = inputBox * RATE_AUD;
+        document.frmCurrencyC.textOutPutTotal.value = outPutBox;
+    }
+    else
+    {
+        window.alert("Whoops there was an error");
+    }
+
+    </script>
+</body>
+</html>
