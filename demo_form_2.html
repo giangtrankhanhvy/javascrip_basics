@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet ID Registration Form</title>
+  </head>
+  <body>
+    <h1>Pet Registration Form</h1>
+    <form action="#">
+      <fieldset>
+        <legend>General information</legend>
+        Name: <input type="text" name="petName" /><br />
+        Date of Birth: <input type="date" name="petDateofBirth" /><br />
+        Weight: <input type="number" name="petWeight" min="0" /><br />
+        Owner's email: <input type="email" name="petOwnerEmail" />
+      </fieldset>
+      <fieldset>
+        <legend>Detailed information</legend>
+        Fur color:
+        <input type="radio" name="petFurColor" value="White" />White
+        <input type="radio" name="petFurColor" value="Black" />Black
+        <input type="radio" name="petFurColor" value="Brown" />Brown
+        <input type="radio" name="petFurColor" value="Yellow" />Yellow
+        <br />
+        Favorite things:
+        <input
+          type="checkbox"
+          name="petFavoriteThings"
+          value="Walks twice a day"
+        />Walks twice a day
+        <input
+          type="checkbox"
+          name="petFavoriteThings"
+          value="Socialization"
+        />Socialization
+        <input
+          type="checkbox"
+          name="petFavoriteThings"
+          value="High-quality Low calories"
+        />High-quality low calories
+        <br />
+        Species:
+        <select name="petSpecies"></select>
+        <option value="Akita Inu">Akita Inu</option>
+        <option value="American Akita">America Akita</option>
+      </fieldset>
+      <fieldset>
+        <legend>Other information</legend>
+        Pet photos: <input type="file" name="petPhoto" /> 
+        Notes:<textarea name="petNote" id="" cols="30" rows="10"></textarea>
+      </fieldset>
+    </form>
+    <h2>Regtristered Pets</h2>
+    <table>
+      <tr>
+        <th>No.</th>
+        <th>Pet Name</th>
+        <th>Registration Date</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Hachiko</td>
+        <td>2015/03/08</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Megumi</td>
+        <td>1986/06/25</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Hiroko</td>
+        <td>1987/10/25</td>
+      </tr>
+    </table>
+  </body>
+</html>
