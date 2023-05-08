@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CAU TRUYEN ADAM</title>
+</head>
+<body>
+
+<script>
+    var  Apple = function (weight) {
+
+        this.weight = weight;
+
+        this.setweight  = function (wegith_) {
+            this.weight = wegith_;
+        };
+
+        this.getweight = function () {
+            return this.weight;
+
+        };
+
+        this.decrease = function () {
+             this.weight = this.weight - 1;
+        };
+
+    };
+
+    var Human = function (name, gender, weighthuman , weightapple, checkweightapple, getweightapple) {
+        this.name = name;
+        this.getweightapple = getweightapple;
+        this.weightHuman =  10;
+        this.weightapple = null;
+
+         this.getweightapple= function (weightapple_) {
+             this.weightapple =  weightapple_
+
+         };
+
+//chuc nang noi
+
+        this.Said = function () {
+            document.write(" Adam và Eva là những con người đầu tiên, trong vườn địa đàng có một cây táo ra những quả táo chín mọng. Adam và Eva lấy một quả táo và ăn, mỗi người ăn một miếng táo cho đến khi hết!");
+        };
+
+//biet an tao
+
+        this.eat = function () {
+            if (this.weightapple.getweight() >0){
+                this.weightapple.decrease();
+                this.weightHuman = this.weightHuman += 1;
+
+                 document.write(" Sau khi an mot mieng tao la  can nang cua ban la   : " + this.weightHuman  +  " So tao con lai la : " + this.weightapple.getweight());
+            } else {
+                 document.write(" Oi khong! ban chua an mieng tao nao ! An tao di de hien can nag  nhe . ");
+            }
+        };
+
+    };
+
+
+
+// nhap ten
+
+
+    var  apple =  new Apple(100);
+    var  human = new Human(2, 2, 2, 2);
+
+      human.getweightapple(apple);
+
+    function main() {
+         human.Said();
+    };
+
+    function eat() {
+
+        human.eat(apple);
+    };
+</script>
+
+<button type="button" onclick="main()" style="background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;">
+    CAU TRUYEN ADAM
+</button>
+
+<button type="button" onclick="eat()" style="background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;">
+     EAT APPLE
+</button>
+
+</body>
+</html>
