@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account_validation</title>
+</head>
+<body>
+    <input type="text" placeholder="Input your account here" required>
+    <button type="submit">Access</button>
+    <script>
+        function isAccount(string) {
+            let myRegex = /^[_a-z0-9]{6,}$/;
+            if (myRegex.test(string)) {
+                return true;
+            } 
+                return false;
+            }
+
+        let account1 = "12345";
+        console.log(isAccount(account1));
+
+        let account2 = "AB25062510";
+        console.log(isAccount(account2));
+
+    </script>
+</body>
+</html>
