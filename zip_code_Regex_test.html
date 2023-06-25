@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex_test_ZipCode</title>
+</head>
+<body>
+    <script>
+        function is_usZipCode(string) {
+            let myRegex = /^[0-9]{5}(?:-[0-9]{4})?$/;
+            if (myRegex.test(string)) {
+                return true;
+            } 
+            return false;
+            }
+
+        let zipcode1 = 7892;
+        console.log(is_usZipCode(zipcode));
+
+        let zipcode2 = '03201-2150';
+        console.log(is_usZipCode(zipcode));
+
+    </script>
+</body>
+</html>
