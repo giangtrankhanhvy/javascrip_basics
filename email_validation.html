@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex_test_ZipCode</title>
+</head>
+<body>
+    <input type="email" placeholder="Enter your email here" required>
+    <button type="submit">Log in</button>
+    <script>
+        function isEmail(string) {
+            let myRegex = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+            if (myRegex.test(string)) {
+                console.log('Succesfully log in');
+            } 
+            console.log('Your email is invalid');
+            }
+
+        let email1 = "giangvy31888@gmail.com";
+        console.log(isEmail(email1));
+
+        let email2 = '@gmail.com';
+        console.log(isEmail(email2));
+
+    </script>
+</body>
+</html>
