@@ -3,29 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OOP</title>
+    <title>OOP_2</title>
 </head>
 <body>
     <script>
-        class Info {
-            constructor (name, property) {
+        class Person {
+            constructor (name) {
                 this._name = name;
-                this._property = property;
             }
-            static calculator (a, b = 1) {
-                return a*3 + 1;
+            walk (a) {
+                return (name + 'walk' + a);
+            }
+            getName () {
+                return this._name;
+            }
+            setName (newName) {
+                this._name = newName;
             }
         }
 
-        class Graphics extends class Info {
-            constructor (length, property) {
-                this._length = property;
-                this._shapes = name;
-            }
-            show () {
-                return this.calculator();
-            }
-        }
+
+        console.log(person1 = new Person ('Vy'));
+        console.log(person1.walk(3));
+
+        console.log(person1.getName());
+        console.log(person1.setName('Megumi'));
+
                     
     </script>
 </body>
