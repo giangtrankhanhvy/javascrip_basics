@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP</title>
+</head>
+<body>
+    <script>
+        const birds = [
+        {"ID": "DV8", "Name": "Eurasian Collared-Dove", "Type": "Dove" },
+        {"ID": "HK12", "Name": "Bald Eagle", "Type": "Hawk" },
+        {"ID": "HK6", "Name": "Cooper's Hawk", "Type": "Hawk" },
+        {"ID": "SP11", "Name": "Bell's Sparrow", "Type": "Sparrow" },
+        {"ID": "DV2", "Name": "Mourning Dove", "Type": "Dove" }
+];
+
+console.log(birds.map (item => {
+    return item.ID;
+}))
+
+    </script>
+</body>
+</html>
