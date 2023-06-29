@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET</title>
+</head>
+<body>
+    <script>
+        const animals = ['zebra', 'horse', 'chimpanzee', 'ostrich', 'ostrich'];
+
+        const animalSet = new Set(animals);
+        let name = "";
+        for (let i of animalSet) {
+            name += i;
+        }
+        console.log(name);
+
+        console.log(animalSet.add('crocodile'));
+
+        //console.log(animalSet.includes('ostrich'));// Warning?
+
+        console.log(animals.includes('ostrich'));
+
+
+    </script>
+</body>
+</html>
