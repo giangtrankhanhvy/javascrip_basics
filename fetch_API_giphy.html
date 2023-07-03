@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fetch</title>
+  </head>
+  <body>
+    <input type="text" id="key" placeholder="Enter a search term" />
+    <button id="search" onclick="searchImage()">Search Giphy</button>
+    <button id="remove" onclick="removeImage()">Remove Images</button>
+    <div id="image-container"></div>
+    <script>
+      const url =
+        "http://api.giphy.com/v1/gifs/search?q=japan&api_key=x8RGwWRoTNPJEDGJLEqJnawedPlKEyTF";
+
+      function searchImage() {
+        fetch(url)
+          .then((response) => {
+            return response.json();
+          })
+          .then((response) => {
+            return response.data.forEach((item) => {
+              const imageElement = document.createElement("img");
+              imageElement.src = item.url;
+              const container = document.getElementById("image-container");
+              container.appendChild(imageElement);
+            });
+          })
+          .catch((error) => {
+            console.log("err:", error);
+          });
+      }
+
+      function removeImage() {
+        document.getElementById("image-container").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>
